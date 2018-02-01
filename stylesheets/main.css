@@ -1,0 +1,95 @@
+html, body, #map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  float: left;
+}
+.row, .col-sm-9, .col-sm-3 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.sidebar-header, .sidebar-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#btn-reset {
+  margin: 10px 20% 20px 20%;
+  width: 60%;
+}
+.distance-adjust {
+  margin: 10px 10% 10px 10%;
+  width: 80%;
+  height: 79px;
+}
+#slider-A, #slider-B {
+  margin: 25px 5% 15px 0;
+  width: 95%;
+  display: none;
+}
+#btn-distance-A, #btn-distance-B {
+  margin: 10px 20% 10px 20%;
+  width: 60%;
+}
+#custom-handle-A, #custom-handle-B{
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+    color: white;
+}
+#custom-handle-A {
+  background-color: #428bca;
+}
+#custom-handle-B {
+  background-color: #5cb85c;
+}
+#container-btn-A, #container-btn-B {
+  height: 54px;
+}
+.trees, .trees svg {
+  position: absolute;
+}
+.trees svg {
+  width: 60px;
+  height: 20px;
+  padding-right: 100px;
+  font: 10px sans-serif;
+}
+.trees circle {
+  fill: red;
+  stroke: black;
+  stroke-width: 1px;
+}
+h3, h4 {
+  text-align: center;
+  white-space: nowrap;
+}
+.height-slider {
+  margin-top: 20px;
+}
+#slider-range {
+  margin: 15px 20% 15px 20%;
+}
+.filtering-tool, .tree-info, .query-result {
+  margin: 10px 10% 10px 10%;
+  width: 80%;
+}
+#close-A, #close-B {
+  float: right;
+  display: none;
+}
+#close-A:hover, #close-B:hover {
+  cursor: pointer;
+}
+.align-center {
+  text-align: center;
+}
+.bold {
+  font-weight: 800;
+}

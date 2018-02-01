@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <meta property="og:image" content="sample-image.png" />
+    <meta property="og:description" content="cs448B Data Visualization Assignment 3">
+    <meta property="og:url" content="http://web.stanford.edu/~pakapark/cs448b-a3/">
+    <meta property="og:title" content="Stanford CS448b Assignment 3">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+  </head>
+  <body>
+      <div class="row">
+
+        <!-- Google Map Display -->
+        <span class="col-sm-9">
+          <div id="map"></div>
+        </span>
+
+        <!-- Start: Visualization Tool -->
+        <span class="col-sm-3">
+          <div class="sidebar-header">
+            <h3>Tree Finder Dynamic Tool</h3>
+          </div>
+
+          <div class="sidebar-button">
+            <button type="button" class="btn btn-default btn-danger" id="btn-reset">Reset</button>
+          </div>
+
+          <div class="distance-adjust">
+            <label for="custom-handle-A">Distance From Point A (in meters)</label><span id="close-A"><img src="close.svg"></span><br>
+            <div id="container-btn-A">
+              <button type="button" name="button" class="btn btn-primary" id="btn-distance-A">Select Pinpoint A</button>
+            </div>
+            <div id="slider-A">
+                <div id="custom-handle-A" class="ui-slider-handle"></div>
+            </div>
+          </div>
+
+          <div class="distance-adjust">
+            <label for="custom-handle-B">Distance From Point B (in meters)</label><span id="close-B"><img src="close.svg"></span><br>
+            <div id="container-btn-B">
+              <button type="button" name="button" class="btn btn-success" id="btn-distance-B">Select Pinpoint B</button>
+            </div>
+            <div id="slider-B">
+                <div id="custom-handle-B" class="ui-slider-handle"></div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="filtering-tool">
+            <h4>Filtering Tool</h4>
+            <p>
+              <label for="amount">DBH (in inches):</label>
+              <input type="text" id="amount" readonly style="border:0; color:blue; font-weight:bold;">
+            </p>
+            <div id="slider-range"></div>
+          </div>
+          <div class="filtering-tool">
+            <label for="">Location Type</label><br>
+            <div class="row">
+              <span class="col-sm-5"><input type="checkbox" class="location-input" name="location" value="Cutout" checked> Cutout</span>
+              <span class="col-sm-7"><input type="checkbox" class="location-input" name="location" value="Handing Pot" checked> Hanging Pot</span>
+            </div>
+            <div class="row">
+              <span class="col-sm-5"><input type="checkbox" class="location-input" name="location" value="Median" checked> Median</span>
+              <span class="col-sm-7"><input type="checkbox" class="location-input" name="location" value="Property Side" checked> Property Side</span>
+            </div>
+            <div class="row">
+              <span class="col-sm-5"><input type="checkbox" class="location-input" name="location" value="Sidewalk" checked> Sidewalk</span>
+              <span class="col-sm-7"><input type="checkbox" class="location-input" name="location" value="Yard" checked> Yard</span>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="query-result">
+            <h4>Query Result</h4>
+            <div class="row">
+              <span class="col-sm-3 align-center bold"># Species</span>
+              <span class="col-sm-9 align-center bold" id="num-species">9761</span>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="tree-info">
+            <h4>Tree Information</h4>
+            <div class="row">
+              <span class="col-sm-3 align-center bold">Tree ID:</span>
+              <span class="col-sm-9" id="tree-id"></span>
+            </div>
+            <div class="row">
+              <span class="col-sm-3 align-center bold">Species:</span>
+              <span class="col-sm-9" id="tree-species"></span>
+            </div>
+            <div class="row">
+              <span class="col-sm-3 align-center bold">Address:</span>
+              <span class="col-sm-9" id="tree-address"></span>
+            </div>
+            <div class="row">
+              <span class="col-sm-3 align-center bold">Site Info:</span>
+              <span class="col-sm-9" id="tree-site-info"></span>
+            </div>
+          </div>
+        </span>
+      </div>
+
+  </body>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="//maps.google.com/maps/api/js?libraries=geometry&sensor=true"></script>
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="scripts/d3.js"></script>
+</html>
